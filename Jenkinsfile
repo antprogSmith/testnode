@@ -1,3 +1,5 @@
+@Library('my-shared-library') _
+
 pipeline {
     agent {
         docker {
@@ -11,6 +13,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                evenOrOdd(22)
                 sh 'npm install'
             }
         }
