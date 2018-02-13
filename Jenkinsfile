@@ -13,7 +13,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                log.info 'Starting'
+                script{
+                    log.info 'Starting'
+                }
                 sh 'npm install'
             }
         }
