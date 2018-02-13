@@ -15,6 +15,9 @@ pipeline {
             steps {
                 script{
                     log.info 'Starting'
+                    oddOrEven(22)
+                    showQuote()
+                    log.warning 'all OK'
                 }
                 sh 'npm install'
             }
