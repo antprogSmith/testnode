@@ -1,3 +1,5 @@
+@Library('mylib') _
+
 pipeline {
     agent {
         docker {
@@ -11,7 +13,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                evenOrOdd(22)
+                log.info 'Starting'
                 sh 'npm install'
             }
         }
